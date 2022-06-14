@@ -1,0 +1,5 @@
+{
+    "host": "192.168.0.30",
+    "port": 9000,
+    "ruta_datos": "datos.csv"
+}

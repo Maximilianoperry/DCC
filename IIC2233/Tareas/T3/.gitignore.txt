@@ -1,0 +1,7 @@
+__pycache__/
+*.DS_STORE
+*.pdf
+cliente/Sprites/
+cliente/__pycache__/
+servidor/__pycache__/
+cliente/frontend/__pycache__/

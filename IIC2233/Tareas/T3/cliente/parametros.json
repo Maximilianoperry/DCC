@@ -1,0 +1,13 @@
+{
+    "host": "192.168.0.30",
+    "port": 9000,
+    "ruta_logo_blanco": "Sprites/Logos/logo_blanco.png",
+    "ruta_icono": "Sprites/Decoraciones/tarjeta.png",
+    "ruta_tarjeta": "Sprites/Decoraciones/tarjeta.png",
+    "ruta_logo_fondo_negro": "Sprites/Logos/logo_fondo_negro.png",
+    "ruta_avatar_1": "Sprites/Avatares/Avatar-1.png",
+    "ruta_avatar_2": "Sprites/Avatares/Avatar-2.png",
+    "ruta_canica_1": "Sprites/Juego/canicas-1.png",
+    "ruta_canica_2": "Sprites/Juego/canicas-2.png",
+    "ruta_reloj": "Sprites/Decoraciones/reloj.png"
+}

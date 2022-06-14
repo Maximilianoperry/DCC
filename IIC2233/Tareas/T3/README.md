@@ -1,19 +1,10 @@
-# Tarea X: Nombre de la tarea :school_satchel:
-
-
-Un buen ```README.md``` puede marcar una gran diferencia en la facilidad con la que corregimos una tarea, y consecuentemente cómo funciona su programa, por lo en general, entre más ordenado y limpio sea éste, mejor será 
-
-Para nuestra suerte, GitHub soporta el formato [MarkDown](https://es.wikipedia.org/wiki/Markdown), el cual permite utilizar una amplia variedad de estilos de texto, tanto para resaltar cosas importantes como para separar ideas o poner código de manera ordenada ([pueden ver casi todas las funcionalidades que incluye aquí](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet))
-
-Un buen ```README.md``` no tiene por que ser muy extenso tampoco, hay que ser **concisos** (a menos que lo consideren necesario) pero **tampoco pueden** faltar cosas. Lo importante es que sea claro y limpio 
+# Tarea 3: DCCalamar :school_satchel:
 
 **Dejar claro lo que NO pudieron implementar y lo que no funciona a la perfección. Esto puede sonar innecesario pero permite que el ayudante se enfoque en lo que sí podría subir su puntaje.**
 
 ## Consideraciones generales :octocat:
 
-<Descripción de lo que hace y que **_no_** hace la tarea que entregaron junto
-con detalles de último minuto y consideraciones como por ejemplo cambiar algo
-en cierta línea del código o comentar una función>
+<El programa funciona con cierta normalidad, pero no pasa de la sala de juegos, ya que no se alcanza a modelar correctamente el ganador de una ronda y eso evita que se siga trabajando en el resto del código. En cliente.py y servidor.py hay lineas comentadas que ayudan a visualizar la información que se envía que podrían ser útiles para la correción.>
 
 ### Cosas implementadas y no implementadas :white_check_mark: :x:
 
@@ -22,102 +13,71 @@ Explicación: mantén el emoji correspondiente, de manera honesta, para cada ite
 - ✅ si completaste **correctamente** lo pedido
 - 🟠 si el item está **incompleto** o tiene algunos errores
 #### Networking: 23 pts (18%)
-##### ❌✅🟠 Protocolo <explicacion\>
-##### ❌✅🟠 Correcto uso de sockets <explicacion\>
-##### ❌✅🟠 Conexión <explicacion\>
-##### ❌✅🟠 Manejo de clientes <explicacion\>
+##### ✅ Protocolo <Se hace uso de TCP - IP\>
+##### ✅ Correcto uso de sockets <la información entre los clientes y el servidor se realiza únicamente a través de este medio\>
+##### ✅ Conexión <Hasta donde se alcnanza a llegar (sala de juego) todos los mensajes se realizan de manera correcta\>
+##### ✅ Manejo de clientes <Se pueden conectar múltiples clientes sin afectar al programa y cuando se llega a un máximo (4) se informa que no se pueden recepcionar más\>
 #### Arquitectura Cliente - Servidor: 31 pts (24%)
-##### ❌✅🟠 Roles <explicacion\>
-##### ❌✅🟠 Consistencia <explicacion\>
-##### ❌✅🟠 Logs <explicacion\>
+##### ✅ Roles <Se separa al cliente del servidor y cada uno realiza las funciones correspondientes según enunciado\>
+##### 🟠 Consistencia <La información se mantiene coordinada, pero no durante la sala de juego y siendo esta la parte más importante del programa, entonces sería erróneo afirmar que hay total consistencia\>
+##### ✅ Logs <Se implementan logs cuando es necesario\>
 #### Manejo de Bytes: 20 pts (15%)
-##### ❌✅🟠 Codificación <explicacion\>
-##### ❌✅🟠 Decodificación <explicacion\>
-##### ❌✅🟠 Encriptación <explicacion\>
-##### ❌✅🟠 Integración <explicacion\>
+##### 🟠 Codificación <La codificación pedida se realiza, pero no se separa en bloques\>
+##### 🟠 Decodificación <mismo error que en Coficiación\>
+##### ✅ Encriptación <Se realiza lo solicitado\>
+##### ✅ Integración <Se utiliza el protocolo\>
 #### Interfaz gráfica: 31 pts (24%)
-##### ❌✅🟠 Modelación <explicacion\>
-##### ❌✅🟠 Ventana inicio <explicacion\>
-##### ❌✅🟠 Sala Principal <explicacion\>
-##### ❌✅🟠 Ventana de Invitación <explicacion\>
-##### ❌✅🟠 Sala de juego <explicacion\>
-##### ❌✅🟠 Ventana final <explicacion\>
+##### 🟠 Modelación <Solo existe front-end\>
+##### ✅ Ventana inicio <Cumple lo pedido\>
+##### 🟠 Sala Principal <Cumple todo lo pedido, pero un usuario si puede ser retado en momentos que no debería poderse\>
+##### ✅ Ventana de Invitación <Cumple lo pedido\>
+##### 🟠 Sala de juego <Se crea la interfaz, pero no se actualiza cuando debería\>
+##### ❌ Ventana final <No se llega a esta ventana\>
 #### Reglas de DCCalamar: 21 pts (16%)
-##### ❌✅🟠 Inicio del juego <explicacion\>
-##### ❌✅🟠 Ronda <explicacion\>
-##### ❌✅🟠 Termino del juego <explicacion\>
+##### ✅ Inicio del juego <Se cumple\>
+##### 🟠 Ronda <se avanza para calcular un ganador, pero la información nunca le llega a los clientes, por lo que mayormente no se cumplen los requerimiento de la ronda\>
+##### ❌ Termino del juego <No se llega a esto\>
 #### General: 4 pts (3%)
-##### ❌✅🟠 Parámetros (JSON) <explicacion\>
+##### ✅ Parámetros (JSON) <Se cumple lo pedido\>
 #### Bonus: 5 décimas máximo
-##### ❌✅🟠 Cheatcode <explicacion\>
-##### ❌✅🟠 Turnos con tiempo <explicacion\>
+##### ❌ Cheatcode <No se realiza\>
+##### ❌ Turnos con tiempo <No se realiza\>
 ## Ejecución :computer:
-El módulo principal de la tarea a ejecutar es  ```archivo.py```. Además se debe crear los siguientes archivos y directorios adicionales:
-1. ```archivo.ext``` en ```ubicación```
-2. ```directorio``` en ```ubicación```
-3. ...
+El módulo principal de la tarea a ejecutar depende de si se ejecuta el cliente o el servidor. El módulo principal de cliente es ```main.py``` en el directorio ```cliente```, mientras que, el módulo prinicpal del servidor es ```main.py``` dentro del directorio ```servidor```.
+
+Además se crea un archivo ```datos.csv``` que almacena información de los clientes dentro del directorio ```servidor```.
 
 
 ## Librerías :books:
 ### Librerías externas utilizadas
 La lista de librerías externas que utilicé fue la siguiente:
 
-1. ```librería_1```: ```función() / módulo```
-2. ```librería_2```: ```función() / módulo``` (debe instalarse)
-3. ...
-
 ### Librerías propias
 Por otro lado, los módulos que fueron creados fueron los siguientes:
 
-1. ```librería_1```: Contiene a ```ClaseA```, ```ClaseB```, (ser general, tampoco es necesario especificar cada una)...
-2. ```librería_2```: Hecha para <insertar descripción **breve** de lo que hace o qué contiene>
-3. ...
+1. ```sala_juego```: Contiene a ```SalaJuego``` hecha para <simular la sala de juego>
+2. ```sala_principal```: Contiene a ```SalaPrincipal``` hecha para <simular la sala principal>
+3. ```ventana_inicio```: Contiene a ```VentanaInicio``` hecha para <simular la ventana de inicio>
+4. ```ventana_invitacion```: Contiene a ```VentanaInvitacion``` hecha para <simular las invitaciones>
+5. ```ventana_rechazo```: Contiene a ```VentanaRechazo``` hecha para <simular cuando una invitacion es rechazada :(>
+6. ```cliente```: Contiene a ```Cliente``` hecha para <simular las acciones de un cliente>
+7. ```cliente/funciones```: Contiene una función hecha para <revisar si las fechas son válidas>
+8. ```interfaz```: Contiene a ```Controlador``` hecho para <manejar la información proveniente de un socket en cliente.py hacia la interfaz>
+9. ```servidor/funciones```: Contiene funciones hechas para <manejar los mensajes y-o clasificarlos>
+10. ```servidor```: Contiene a ```servidor``` hecha para <simular las acciones del servidor>
 
 ## Supuestos y consideraciones adicionales :thinking:
 Los supuestos que realicé durante la tarea son los siguientes:
 
-1. <Descripción/consideración 1 y justificación del por qué es válido/a> 
-2. <Descripción/consideración 2 y justificación del por qué es válido/a>
-3. ...
-
-PD: <una última consideración (de ser necesaria) o comentario hecho anteriormente que se quiera **recalcar**>
-
-
--------
+1. <Todos los meses tienen 31 días y se justifica porque es una aproximación a la realidad que evita que se llene de excesivamente de código la función hecha para revisar ello/a> 
+2. <Solo se puede comenzar a retar a jugadores una vez que se haya llenado la sala y se justifica porque de no ser así uno podría escoger un rival más difícil que otro, sin saber las otras posibilidades que podría tener/a>
 
 
 
-**EXTRA:** si van a explicar qué hace específicamente un método, no lo coloquen en el README mismo. Pueden hacerlo directamente comentando el método en su archivo. Por ejemplo:
-
-```python
-class Corrector:
-
-    def __init__(self):
-          pass
-
-    # Este método coloca un 6 en las tareas que recibe
-    def corregir(self, tarea):
-        tarea.nota  = 6
-        return tarea
-```
-
-Si quieren ser más formales, pueden usar alguna convención de documentación. Google tiene la suya, Python tiene otra y hay muchas más. La de Python es la [PEP287, conocida como reST](https://www.python.org/dev/peps/pep-0287/). Lo más básico es documentar así:
-
-```python
-def funcion(argumento):
-    """
-    Mi función hace X con el argumento
-    """
-    return argumento_modificado
-```
-Lo importante es que expliquen qué hace la función y que si saben que alguna parte puede quedar complicada de entender o tienen alguna función mágica usen los comentarios/documentación para que el ayudante entienda sus intenciones.
 
 ## Referencias de código externo :book:
 
 Para realizar mi tarea saqué código de:
-1. \<link de código>: este hace \<lo que hace> y está implementado en el archivo <nombre.py> en las líneas <número de líneas> y hace <explicación breve de que hace>
+1. \<https://github.com/IIC2233/syllabus-2021-1/tree/main/Actividades/AF7>: este guió para crear al controlador y está implementado en el archivo <interfaz.py> en la funcion __init__ y crea un controlador que regula mensajes provenientes del servidor con las interfaces gráficas.
 
-
-
-## Descuentos
-La guía de descuentos se encuentra [link](https://github.com/IIC2233/syllabus/blob/main/Tareas/Descuentos.md).
+2. \<https://github.com/IIC2233/Syllabus/tree/main/Ayudant%C3%ADas/AY7.5>: este ayudó a crear al cliente y al servidor y está implementado en el archivo <cliente.py> y <servidor.py> en la recepción de mensajes y creación de los threads.
